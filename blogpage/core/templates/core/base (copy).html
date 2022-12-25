@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title> {% block title%} {%endblock%} Crash blog</title>
+
+	<style>
+	
+		.dpclass {
+			margin: 0px;
+			background-color: #00807a5e;
+			width: 154px;
+			border: 5px solid grey	
+		
+		}
+		
+		
+
+		.inline-block-child {
+		  display: inline-block;
+		}
+
+
+		.parent {
+		  background: mediumpurple;
+		  padding: 1rem
+		}
+		
+		.child {
+	 	  padding:10px;
+		  border: 1px solid indigo;
+		  padding: 1rem;
+		  width: 150px;
+		}
+
+	
+	</style>
+<head>
+
+<body>
+
+	{% block content%}
+
+	{% endblock %}
+
+
+
+</body>
+</html>

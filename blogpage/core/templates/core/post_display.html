@@ -1,0 +1,44 @@
+{% extends 'core/base.html'%}
+{% block title%} about | {% endblock%}
+
+{% block content %}
+
+<h1> {{post.title}} </h1>
+<h2> {{post.created_at }} </h2>
+
+
+<a href="{%url 'category_post' id=post.category.id %}" class="navabr-item is-size-10 ">
+    <p> Catagory: {{post.category }}</p>
+</a>
+
+<p> {{post.intro }}</p>
+<p> {{post.body }}</p>
+<p> {{post.created_at|timesince }} </p>
+<h2 class='subtitle is-4'> comments</h2>
+
+<form method="post" class="md-6">
+    {% csrf_token %}
+    {{form.as_p}}
+    <div class="field">
+        <div class="control">
+            <button class="button is-sucess"> submit comment</button>
+        </div>
+    </div>
+</form>
+
+<br>
+<br>
+<br>
+
+{% for comment in post.comments.all%}
+<article class="media">
+    <div class="media-content">
+        <strong>{{comment.name}}</strong> &nbsp; <small>{{comment.created_at|timesince }}ago </small>
+        <br>
+        {{comment.body}}
+    </div>
+    <br>
+</article>
+{%endfor%}
+
+{% endblock%}

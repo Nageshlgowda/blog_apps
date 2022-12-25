@@ -1,0 +1,28 @@
+{% extends 'core/base.html'%}
+
+{% block title%} category  {% endblock%}
+
+{% block content %}
+
+{% for post in category.posts.all%}
+<div>
+    <h1> {{post.title}}</h1>
+    <h1> {{post.body}}</h1>
+</div>
+
+{% endfor %}
+
+{% endblock%}
+
+
+<!--<form method="post" class="md-6">-->
+<!--    {% csrf_token %}-->
+<!--    {{form.as_p}}-->
+<!--    <div class="field">-->
+<!--        <div class="control">-->
+<!--            <button class="button is-sucess"> submit comment</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</form>-->
+
+

@@ -1,0 +1,18 @@
+{% extends 'core/base.html'%}
+{% block title%} about | {% endblock%}
+{% block content %}
+<h2>Create post</h2>
+<form action="/create_post" method="post">
+    Title
+    <br>
+    <input type="text" id="title" name="title" value="John"><br>
+    <br>
+
+    Body
+    <br>
+    <textarea id="body" name="body" value="Doe">deafutl value</textarea>
+
+    <br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock%}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title%} {% endblock%} Blog </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="jumbotron text-center">
+    <h1>My First Blog Page</h1>
+    <p>Resize this responsive page to see the effect!</p>
+</div>
+<div>
+    <a href="/" class="navabr-item is-size-5 has-text-weight-semibold">
+        <button>Home</button>
+    </a>
+    <a href="{%url 'about'%}" class="navabr-item ">
+        <button type='submit'>about</button>
+    </a>
+    <a href="{%url 'create_post'%}" class="navabr-item is-size-10 ">
+        <button type='submit'>Add post</button>
+    </a>
+</div>
+<div class="container">
+    <h2>Search blog</h2>
+    <input type="search" class="form-control" id="usr" placeholder="search blog.....">
+    <button>Search</button>
+</div>
+<br><br><br><br><br>
+
+<section class="section">
+    <div class="container">
+        {% block content%}
+        {% endblock %}
+    </div>
+</section>
+<br><br><br><br><br><br
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Column 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Column 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+        <div class="col-sm-4">
+            <h3>Column 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p align="center">copyright.</p>
+    </div>
+</footer>
+
+</body>
+
+</html>
