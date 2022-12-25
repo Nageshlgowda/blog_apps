@@ -1,0 +1,7 @@
+django-admin help  ### list of commands
+django-admin startproject <nameoftheproject>
+python manage.py migrate ###create database
+python3 manage.py superuser ##create superuser
+python3 manage.py runserver ##run server
+python3 manage.py startapp core
+
